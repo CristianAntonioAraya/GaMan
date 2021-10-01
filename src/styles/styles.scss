@@ -1,0 +1,16 @@
+
+@import './base/settings';
+@import './base/base';
+
+//Components
+
+
+// ---------- Pages
+
+@import './components/pages/home';
+
+// ---------- Navigation
+
+@import './components/navigations/navbar/navbar';
+@import './components/navigations/sidebar/sidebar';
+
