@@ -1,0 +1,8 @@
+.home__container{
+    padding: 1rem 15rem;
+    background-color: $Light_Color;
+}
+.home__slider-news{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}

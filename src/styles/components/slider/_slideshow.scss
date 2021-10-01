@@ -1,0 +1,33 @@
+.slideshow__content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.slideshow__slide{
+    width: 100%;
+    overflow:hidden;
+    transition: 0.3s all ease;
+    z-index: 10;
+}
+.slideshow__img{
+    width: 25rem;
+    height: 30rem;
+    vertical-align: top;
+}
+.slideshow__icon{
+    position: absolute;
+    font-size: 60px;
+    top: 40%;
+    margin: 0 10rem;
+    color: $Primary_Color;
+    z-index: 1000;
+    &:hover{
+        transform: scale(1.1);
+        color: lighten($color: $Primary_Color, $amount: 10);
+    }
+}
+.fa-arrow-left{
+    left: 0;
+}
+.fa-arrow-right{
+    right: 0;
+}

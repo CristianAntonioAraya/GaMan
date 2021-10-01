@@ -1,0 +1,17 @@
+.slider__container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    background-color: $Secondary_Color;
+    padding: 1rem;
+    justify-content: center;
+}
+.slider__content{
+    width: 25rem;
+    height: 30rem;
+    margin: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}

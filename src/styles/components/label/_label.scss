@@ -1,0 +1,10 @@
+.label__container{
+    position: absolute;
+    left: 0;
+    padding: 1rem;
+    background-color: $Primary_Color;
+    border-radius: 0 0 30px 0;
+}
+.label__text{
+    color: $Light_Color;
+}
