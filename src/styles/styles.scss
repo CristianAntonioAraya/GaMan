@@ -8,6 +8,7 @@
 // ---------- Pages
 
 @import './components/pages/home';
+@import './components/pages/animepage';
 
 // ---------- Navigation
 
@@ -39,3 +40,12 @@
 //anime card
 
 @import './components/animecard/animecard';
+
+//anime single components
+
+@import './components/singleanime/animeepisode';
+@import './components/singleanime/animeinformation';
+@import './components/singleanime/animemenu';
+@import './components/singleanime/animereviews';
+@import './components/singleanime/animesynopsis';
+@import './components/singleanime/animetrailer';

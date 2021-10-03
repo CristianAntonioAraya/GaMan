@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { GetUpComingAnime } from '../../sevices/GetData'
 
 const SlideShow = () => {
@@ -46,6 +47,8 @@ const SlideShow = () => {
         }
         HandleGetData();
     }, [])
+    
+    console.log(upComingAnime)
 
     if(upComingAnime === null){
         return(
@@ -60,9 +63,9 @@ const SlideShow = () => {
             <div className="slideshow__content" ref={slide}>
 
                 <div className="slideshow__slide">
-                    <a href="#">
+                    <Link to={`/anime/${upComingAnime[0].mal_id}`}>
                         <img  className="slideshow__img"  src={upComingAnime[0].image_url}alt="" />
-                    </a >
+                    </Link >
                     <div className="slideshow__info">
                         <p className="slideshow__title">{upComingAnime[0].title}</p>
                         <p className="slideshow__date">{upComingAnime[0].start_date}</p>
@@ -70,9 +73,9 @@ const SlideShow = () => {
                 </div>
                 
                 <div className="slideshow__slide">
-                    <a href="#">
+                    <Link to={`/anime/${upComingAnime[1].mal_id}`}>
                         <img  className="slideshow__img" src={upComingAnime[1].image_url}alt="" />
-                    </a>
+                    </Link>
                     <div className="slideshow__info">
                         <p className="slideshow__title">{upComingAnime[1].title}</p>
                         <p className="slideshow__date">{upComingAnime[1].start_date}</p>
@@ -80,9 +83,9 @@ const SlideShow = () => {
                 </div>
 
                 <div className="slideshow__slide">
-                    <a href="#">
+                    <Link to={`/anime/${upComingAnime[2].mal_id}`}>
                         <img  className="slideshow__img" src={upComingAnime[2].image_url}alt="" />
-                    </a>
+                    </Link>
                     <div className="slideshow__info">
                         <p className="slideshow__title">{upComingAnime[2].title}</p>
                         <p className="slideshow__date">{upComingAnime[2].start_date}</p>
@@ -90,9 +93,9 @@ const SlideShow = () => {
                 </div>
 
                 <div className="slideshow__slide">
-                    <a href="#">
+                    <Link to={`/anime/${upComingAnime[3].mal_id}`}>
                         <img  className="slideshow__img" src={upComingAnime[3].image_url}alt="" />
-                    </a>
+                    </Link>
                     <div className="slideshow__info">
                         <p className="slideshow__title">{upComingAnime[3].title}</p>
                         <p className="slideshow__date">{upComingAnime[3].start_date}</p>
@@ -100,9 +103,9 @@ const SlideShow = () => {
                 </div>
 
                 <div className="slideshow__slide">
-                    <a href="#">
+                    <Link to={`/anime/${upComingAnime[4].mal_id}`}>
                         <img  className="slideshow__img" src={upComingAnime[4].image_url}alt="" />
-                    </a>
+                    </Link>
                     <div className="slideshow__info">
                         <p className="slideshow__title">{upComingAnime[4].title}</p>
                         <p className="slideshow__date">{upComingAnime[4].start_date}</p>

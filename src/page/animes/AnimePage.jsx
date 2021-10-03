@@ -1,9 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router'
+import AnimeEpisode from '../../components/singleanime/AnimeEpisode';
+import AnimeInformation from '../../components/singleanime/AnimeInformation';
+import AnimeMenu from '../../components/singleanime/AnimeMenu';
+import AnimeReviews from '../../components/singleanime/AnimeReviews';
+import AnimeSynopsis from '../../components/singleanime/AnimeSynopsis';
+import AnimeTrailer from '../../components/singleanime/AnimeTrailer';
+import { GetSingleAnime } from '../../sevices/GetData';
 
 const AnimePage = () => {
+
+    const {animeId} = useParams();
+    const [anime, setAnime] = useState(null)
+
+    useEffect(() => {
+        const GetData = async() => {
+            const data = await GetSingleAnime({animeId})
+            setAnime(data)
+        }
+        GetData()
+    }, [animeId])
+
+    console.log(anime)
+
+    if(anime === null ){
+        return(
+            <div>Loading</div>
+        )
+    }
     return (
-        <div>
-            Anime
+        <div className="animepage__container">
+            <div className="animepage__first">
+                <img className="animepage__image" src={anime.image_url} alt={anime.title} />
+                <div className="animepage__first-content">
+                    <p className="animepage__title">{anime.title}</p>
+                    <p className="animepage__subtitle">{anime.title_japanese}</p>
+                    <div className="animepage__content">
+                        <AnimeInformation/>
+                        <AnimeMenu/>
+                    </div>
+                </div>
+            </div>
+            <div className="animepage__second">
+                <AnimeTrailer/>
+                <AnimeSynopsis/>
+            </div>
+            <AnimeEpisode/>
+            <AnimeReviews/>
+
         </div>
     )
 }

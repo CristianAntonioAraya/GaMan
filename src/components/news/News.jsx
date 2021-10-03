@@ -14,7 +14,6 @@ const News = () => {
         }
         handleGetNews();
     }, [])
-    console.log(news)
 
     if(news === null){
         return(
