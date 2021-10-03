@@ -26,3 +26,16 @@
 //news
 
 @import './components/news/news';
+@import './components/news/singlenews';
+
+//search bar
+
+@import './components/navigations/searchbar/searchbar';
+
+//airing Anime
+
+@import './components/airing/airinganime';
+
+//anime card
+
+@import './components/animecard/animecard';

@@ -1,0 +1,53 @@
+.animecard__container{
+    width: 12rem;
+    margin: 1rem 2rem 1rem 0;
+    position: relative;
+    transition: all ease 0.5s;
+    border: 1px solid  $Primary_Color;
+    .animecard__info{
+        display: none;
+    }
+    &:hover{
+        .animecard__info{
+            position: absolute;
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            transition: all ease 0.5s;
+            height: 100%;
+        }
+    }
+}
+.animecard__img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.animecard__title{
+    position: absolute;
+    color: $Light_Color;
+    width: 100%;
+    text-align: center;
+    bottom: 10%;
+    padding: 1rem;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.animecard__btn{
+    position: absolute;
+    transition: all ease 0.5s;
+    display: flex;
+    color: $Light_Color;
+    top: 30%;
+    right: 25%;
+    font-size: 20px;
+    padding: 1rem;
+    background-color: $Primary_Color;
+    border-radius: 30px;
+    &:hover{
+        background-color: lighten($color: $Primary_Color, $amount: 5);
+    }
+}

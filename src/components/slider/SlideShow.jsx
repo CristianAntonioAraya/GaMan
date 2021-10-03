@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { GetUpComingAnime } from '../../sevices/GetData'
 
 const SlideShow = () => {
@@ -40,7 +39,7 @@ const SlideShow = () => {
         const HandleGetData = async() => {
             const data = await GetUpComingAnime()
             const array = []
-            for (let index = 0; index < 3; index++) {
+            for (let index = 0; index < 6; index++) {
                 array.push(data[index])
             }
             setUpComingAnime(array)
@@ -59,30 +58,59 @@ const SlideShow = () => {
     return(
         <div className="slideshow__container">
             <div className="slideshow__content" ref={slide}>
+
                 <div className="slideshow__slide">
                     <a href="#">
                         <img  className="slideshow__img"  src={upComingAnime[0].image_url}alt="" />
                     </a >
-                    <div>
-                        <p>hola</p>
+                    <div className="slideshow__info">
+                        <p className="slideshow__title">{upComingAnime[0].title}</p>
+                        <p className="slideshow__date">{upComingAnime[0].start_date}</p>
                     </div>
                 </div>
+                
                 <div className="slideshow__slide">
                     <a href="#">
                         <img  className="slideshow__img" src={upComingAnime[1].image_url}alt="" />
                     </a>
-                    <div>
-                        <p>hola</p>
+                    <div className="slideshow__info">
+                        <p className="slideshow__title">{upComingAnime[1].title}</p>
+                        <p className="slideshow__date">{upComingAnime[1].start_date}</p>
                     </div>
                 </div>
+
                 <div className="slideshow__slide">
                     <a href="#">
                         <img  className="slideshow__img" src={upComingAnime[2].image_url}alt="" />
                     </a>
-                    <div>
-                        <p>hola</p>
+                    <div className="slideshow__info">
+                        <p className="slideshow__title">{upComingAnime[2].title}</p>
+                        <p className="slideshow__date">{upComingAnime[2].start_date}</p>
                     </div>
                 </div>
+
+                <div className="slideshow__slide">
+                    <a href="#">
+                        <img  className="slideshow__img" src={upComingAnime[3].image_url}alt="" />
+                    </a>
+                    <div className="slideshow__info">
+                        <p className="slideshow__title">{upComingAnime[3].title}</p>
+                        <p className="slideshow__date">{upComingAnime[3].start_date}</p>
+                    </div>
+                </div>
+
+                <div className="slideshow__slide">
+                    <a href="#">
+                        <img  className="slideshow__img" src={upComingAnime[4].image_url}alt="" />
+                    </a>
+                    <div className="slideshow__info">
+                        <p className="slideshow__title">{upComingAnime[4].title}</p>
+                        <p className="slideshow__date">{upComingAnime[4].start_date}</p>
+                    </div>
+                </div>
+
+               
+
             </div>
             <i onClick={handlePrev} className="fas fa-arrow-left slideshow__icon"></i>
             <i onClick={handleNext} className="fas fa-arrow-right slideshow__icon"></i>
