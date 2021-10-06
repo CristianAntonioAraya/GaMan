@@ -1,12 +1,23 @@
 import React from 'react'
-import Label from '../label/Label'
+import ReactPlayer from 'react-player'
 
-const AnimeTrailer = () => {
+const AnimeTrailer = ({trailer}) => {
+
+    if(trailer === null){
+        return(
+            <div className="animetrailer__no-trailer">No trailer :(</div>
+        )
+    }
+
     return (
         <div className="animetrailer__container">
-            <Label text={"Trailer"}/>
-            Trailer
-        </div>
+            <div className="animetrailer__content">
+                <ReactPlayer
+                    url={trailer}
+                    origin="http://localhost:3000"
+                    />
+            </div>
+         </div>
     )
 }
 

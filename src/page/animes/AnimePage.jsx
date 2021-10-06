@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router'
+import { useParams } from 'react-router-dom'
+import Label from '../../components/label/Label';
 import AnimeEpisode from '../../components/singleanime/AnimeEpisode';
 import AnimeInformation from '../../components/singleanime/AnimeInformation';
 import AnimeMenu from '../../components/singleanime/AnimeMenu';
@@ -13,6 +14,7 @@ const AnimePage = () => {
     const {animeId} = useParams();
     const [anime, setAnime] = useState(null)
 
+
     useEffect(() => {
         const GetData = async() => {
             const data = await GetSingleAnime({animeId})
@@ -22,6 +24,7 @@ const AnimePage = () => {
     }, [animeId])
 
     console.log(anime)
+
 
     if(anime === null ){
         return(
@@ -36,17 +39,37 @@ const AnimePage = () => {
                     <p className="animepage__title">{anime.title}</p>
                     <p className="animepage__subtitle">{anime.title_japanese}</p>
                     <div className="animepage__content">
-                        <AnimeInformation/>
+                        <AnimeInformation
+                            status={anime.status}
+                            episodes={anime.episodes}
+                            type={anime.type}
+                            genres={anime.genres}
+                            producers={anime.producers}
+                            rank={anime.rank}
+                            rating={anime.rating}
+                            studio={anime.studio}
+                            release={anime.aired.from}
+                        />
                         <AnimeMenu/>
                     </div>
                 </div>
             </div>
-            <div className="animepage__second">
-                <AnimeTrailer/>
-                <AnimeSynopsis/>
+            <div className="animepage__labels">
+                <Label text={'Trailer'}/>
+                <Label className="pl-1" text={'Synopsis'}/>
             </div>
-            <AnimeEpisode/>
-            <AnimeReviews/>
+            <div className="animepage__second">
+                <AnimeTrailer trailer={anime.trailer_url}/>
+                <AnimeSynopsis synopsis={anime.synopsis}/>
+            </div>
+            <div>
+                <Label text={'Episodes'}/>
+                <AnimeEpisode animeId={anime.mal_id}/>
+            </div>
+            <div>
+                <Label text={'Reviews'}/>
+                <AnimeReviews animeId={anime.mal_id}/>
+            </div>
 
         </div>
     )

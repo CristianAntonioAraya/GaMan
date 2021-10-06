@@ -1,14 +1,14 @@
 .airing__container{
-    display: block;
+    display: flex;
     position: relative;
     width: 100%;
     background-color: $Secondary_Color;
-    margin: 1rem 0;
-    padding: 4rem 0;
+    justify-content: center;
+    margin: 0  0 1rem 0;
+    padding: 1rem;
 }
 .airing__content{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 3rem ;
     justify-content: center;
 }

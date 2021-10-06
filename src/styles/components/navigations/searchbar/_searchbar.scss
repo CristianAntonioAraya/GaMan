@@ -30,6 +30,9 @@
         color: lighten($color: $Primary_Color, $amount: 10);
     }
 }
+.searchbar__form{
+    display: flex;
+}
 .searchbar__search{
     background-color: transparent;
     border: none;
@@ -44,4 +47,13 @@
 .fa-search{
     cursor: pointer;
     font-size: 25px;
+    color: $Primary_Color;
+    &:hover{
+        color: lighten($color: $Primary_Color, $amount: 20);
+    }
+}
+.searchbar__btn{
+    background-color: transparent;
+    border: none;
+    
 }

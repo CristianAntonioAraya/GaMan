@@ -1,11 +1,25 @@
-import React from 'react'
-import Label from '../label/Label'
+import React, { useEffect, useState } from 'react'
+import { GetEpisodes } from '../../sevices/GetData'
 
-const AnimeEpisode = () => {
+const AnimeEpisode = ({animeId}) => {
+
+    const [episodes, setEpisodes] = useState(null)
+
+    useEffect(() => {
+        const HandleGetEpisodes = async () => {
+            const data = await GetEpisodes({animeId})
+            setEpisodes(data)
+        }
+        HandleGetEpisodes();
+    }, [animeId])
+
+    console.log(episodes)
+
     return (
-        <div className="anime__episode">
-            <Label text={"Episode"} />
-            Episode
+        <div className="animeepisode__container">
+            <div className="animeepisode__content">
+                Episodes
+            </div>
         </div>
     )
 }

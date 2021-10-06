@@ -52,3 +52,39 @@ export const GetNews = () => {
         
     }
 }
+export const GetEpisodes = ({animeId}) => {
+    try {
+        return(
+            axios.get(`${API_URL}/anime/${animeId}/episodes`)
+            .then(resp=>{
+                return resp.data.episodes
+            })
+        )
+    } catch (error) {
+        
+    }
+}
+export const GetReviews = ({animeId}) => {
+    try {
+        return(
+            axios.get(`${API_URL}/anime/${animeId}/reviews`)
+            .then(resp=>{
+                return resp.data.reviews 
+            })
+        )
+    } catch (error) {
+        
+    }
+}
+export const GetSearch = ({search}) => {
+    try {
+        return(
+            axios.get(`${API_URL}/search/anime?q=${search}`)
+            .then(resp=>{
+                return resp.data.results
+            })
+        )
+    } catch (error) {
+        
+    }
+}

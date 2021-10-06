@@ -48,8 +48,6 @@ const SlideShow = () => {
         HandleGetData();
     }, [])
     
-    console.log(upComingAnime)
-
     if(upComingAnime === null){
         return(
             <div>

@@ -1,6 +1,19 @@
 .animesynopsis__container{
     position: relative;
-    width: 100%;
-    background-color: $Secondary_Color;
+    align-items: center;
     margin-left: 1rem;
+    color: $Light_Color;
+    font-size: 25px;
+}
+.animesynopsis__content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: $Secondary_Color;
+}
+.animesynopsis__text{
+    overflow-y: auto;
+    height: 20rem;
 }

@@ -1,13 +1,13 @@
 .animeinfo__container{
     position: relative;
+    display: block;
     width: 100%;
-    max-height: 26rem;
-    min-height: 26rem;
-    background-color: $Secondary_Color;
-    padding: 5rem 1rem;
     overflow: hidden;
+    height: 100%;
+    padding: 0 0 0 1rem;
 }
 .animeinfo__content{
+    background-color: $Secondary_Color;
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     height: 100%;
@@ -18,7 +18,7 @@
     justify-content: center;
 }
 .animeinfo__line{
-    width: 1px;
+    width: 2px;
     height: 100%;
-    background-color: red;
+    background-color: $Primary_Color;
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { GetNews } from '../../sevices/GetData'
-import Label from '../label/Label'
 import SingleNew from './SingleNew'
 
 const News = () => {
@@ -22,7 +21,6 @@ const News = () => {
     }
     return (
         <div className="news__container">
-            <Label text={'News'}/>
             {
                 news.map((item,index)=>(
                     <SingleNew 

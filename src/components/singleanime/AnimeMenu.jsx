@@ -5,7 +5,9 @@ const AnimeMenu = () => {
     return (
         <div className="animemenu__container">
             <Label text={"Menu"}/>
-            Menu
+            <div className="animemenu__content">
+                menu
+            </div>
         </div>
     )
 }

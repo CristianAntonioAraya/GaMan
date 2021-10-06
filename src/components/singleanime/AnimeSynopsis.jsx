@@ -1,11 +1,11 @@
 import React from 'react'
-import Label from '../label/Label'
 
-const AnimeSynopsis = () => {
+const AnimeSynopsis = ({synopsis}) => {
     return (
         <div className="animesynopsis__container">
-            <Label text={"Synopsis"}/>
-            Synopsis
+            <div className="animesynopsis__content">
+                <p className="animesynopsis__text">{synopsis}</p>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,23 @@
 .animetrailer__container{
     position: relative;
-    width: 100%;
+    overflow-y: hidden;
+}
+.animetrailer__no-trailer{
+    padding:1rem;
     background-color: $Secondary_Color;
-    height: 5rem;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: $Light_Color;
+}
+.animetrailer__content{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+    background-color: $Secondary_Color;
+    height: fit-content;
 }

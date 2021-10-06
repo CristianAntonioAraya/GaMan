@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { GetUpAiringAnime } from '../../sevices/GetData'
-
 import AnimeCard from '../animecard/AnimeCard'
-import Label from '../label/Label'
 
 
 const AiringAnime = () => {
@@ -19,7 +17,6 @@ const AiringAnime = () => {
 
     return (
         <div className="airing__container">
-            <Label text={'Lives Anime'}/>
             <div className="airing__content">
                 {
                     animes && 
@@ -31,7 +28,8 @@ const AiringAnime = () => {
                             rank={item.rank} 
                             title={item.title} 
                             type={item.type}
-                            id={item.mal_id}/>
+                            id={item.mal_id}
+                            />
                     ))
                 }
             </div>
