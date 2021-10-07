@@ -12,12 +12,12 @@
 .searchbar__link{
     color: $Light_Color;
     font-family: 'Oswald', sans-serif;
-    padding: 1rem 2rem;
-    margin: 0 1rem;
+    padding: 1rem 3rem;
     font-weight: 500;
     font-size: 25px;
     cursor: pointer;
     background-color: $Secondary_Color;
+    transition: 0.5s all ease;
     &:hover{
         color: lighten($color: $Light_Color, $amount: 10);
         background-color: lighten($color: $Secondary_Color, $amount: 10);

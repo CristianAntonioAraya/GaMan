@@ -24,7 +24,7 @@ const Navbar = () => {
                       </button>
                   </form>
               </div>
-              <p>logout</p>
+              <p className="navbar__footer">logout</p>
             </div>
   )
 }

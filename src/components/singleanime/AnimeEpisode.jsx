@@ -12,8 +12,6 @@ const AnimeEpisode = ({ animeId }) => {
     HandleGetEpisodes()
   }, [animeId])
 
-  console.log(episodes)
-
   return (
         <div className="animeepisode__container">
             <div className="animeepisode__content">

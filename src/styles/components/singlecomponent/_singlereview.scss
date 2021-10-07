@@ -1,0 +1,45 @@
+.singlereview__container{
+    padding: 1rem;
+    margin: 1rem;
+    width: 35rem;
+    background-color: $Light_Color;
+    border: 3px solid $Primary_Color;
+}
+.singlereview__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.singlereview__name{
+    font-size: 25px;
+}
+.singlereview__score{
+    font-size: 18px;
+}
+.singlereview__content{
+    width: 100%;
+    padding: 0 1rem;
+}
+.singlereview__text{
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.singlereview__btn{
+    background-color: $Secondary_Color;
+    border: 2px solid $Primary_Color;
+    color: $Light_Color;
+    font-size: 15px;
+    padding: 0.5rem;
+    margin: 0.5rem 0; 
+    width: 100%;
+    cursor: pointer;
+    &:hover{
+        background-color: lighten($color: $Secondary_Color, $amount: 10);
+    }
+}

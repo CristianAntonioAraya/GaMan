@@ -8,19 +8,21 @@
 }
 .navbar__title{
     color: $Light_Color;
-    font-size: 40px;
+    font-size: 45px;
     text-decoration: none;
+    font-family: 'Alfa Slab One', cursive;
 }
 .navbar__input{
     display: flex;
     text-align: center;
     align-items: center;
-    border: 2px solid $Secondary_Color;
+    border: 2px solid $Light_Color;
     padding: 0.6rem 1rem;
     border-radius: 50px;
     color: $Light_Color;
+    transition: 0.3s all ease;
     &:hover{
-        border-color: darken($color: $Primary_Color, $amount: 10);
+        border-color: lighten($color: $Light_Color, $amount: 20);
         color: lighten($color: $Primary_Color, $amount: 10);
     }
 }
@@ -41,7 +43,7 @@
 .fa-search{
     cursor: pointer;
     font-size: 25px;
-    color: $Dark_Color;
+    color: $Light_Color;
     &:hover{
         color: lighten($color: $Light_Color, $amount: 10);
     }
@@ -49,5 +51,8 @@
 .navbar__btn{
     background-color: transparent;
     border: none;
-    
+}
+.navbar__footer{
+    color: $Light_Color;
+    font-size: 25px;
 }

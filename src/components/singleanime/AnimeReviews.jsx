@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { GetReviews } from '../../sevices/GetData'
 import Label from '../label/Label'
+import SingleReview from '../singlereview/SingleReview'
 
 const AnimeReviews = ({animeId}) => {
 
@@ -22,14 +23,14 @@ const AnimeReviews = ({animeId}) => {
 
     return (
         <div className="animereviews__container">
-            <Label text={"Reviews"}/>
             <div className="animereviews__content">
                 {
                     reviews.map(item=>(
-                        <div key={item.mal_id} >
-                            <p>{item.content}</p>
-
-                        </div>
+                        <SingleReview key={item.mal_id} 
+                            content={item.content}
+                            reviewer={item.reviewer}
+                            id={item.mal_id}
+                        />
                     ))
                 }
             </div>

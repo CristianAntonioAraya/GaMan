@@ -17,3 +17,13 @@
     overflow-y: auto;
     height: 20rem;
 }
+.animesynopsis__text::-webkit-scrollbar{
+    background-color: $Secondary_Color;
+    margin: 0 1rem;
+    width: 10px;
+}
+.animesynopsis__text::-webkit-scrollbar-thumb{
+    background: $Primary_Color;
+    width: 10px;
+    border-radius: 10px;
+}

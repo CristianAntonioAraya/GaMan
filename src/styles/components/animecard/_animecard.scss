@@ -5,17 +5,18 @@
     transition: all ease 0.5s;
     border: 1px solid  $Primary_Color;
     .animecard__info{
+        transition: all ease 0.5s;
         display: none;
     }
     &:hover{
         .animecard__info{
+            transition: all 0.5s ease;
             position: absolute;
             display: flex;
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
             top: 0;
             width: 100%;
-            transition: all ease 0.5s;
             height: 100%;
         }
     }
@@ -23,6 +24,7 @@
 .animecard__img{
     width: 100%;
     height: 100%;
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 .animecard__title{
