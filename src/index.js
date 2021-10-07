@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import GaManApp from './GaManApp';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import GaManApp from './GaManApp'
 import './styles/styles.scss'
 
 ReactDOM.render(
@@ -8,4 +8,4 @@ ReactDOM.render(
     <GaManApp />
   </React.StrictMode>,
   document.getElementById('root')
-);
+)

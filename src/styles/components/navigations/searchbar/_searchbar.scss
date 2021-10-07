@@ -1,59 +1,25 @@
 .searchbar__container{
-    width: 100vw;
     background-color: $Secondary_Color;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 15rem;
+    padding: 0rem 20rem;
     align-items: center;
 }
 .searchbar__links{
     display: flex;
     width: 100%;
+    justify-content: center;
 }
 .searchbar__link{
     color: $Light_Color;
     font-family: 'Oswald', sans-serif;
-    padding-right: 6rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
     font-weight: 500;
     font-size: 25px;
-}
-.searchbar__input{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border: 2px solid $Primary_Color;
-    padding: 0.6rem 1rem;
-    border-radius: 50px;
-    color: $Primary_Color;
-    &:hover{
-        border-color: lighten($color: $Primary_Color, $amount: 10);
-        color: lighten($color: $Primary_Color, $amount: 10);
-    }
-}
-.searchbar__form{
-    display: flex;
-}
-.searchbar__search{
-    background-color: transparent;
-    border: none;
-    color: $Light_Color;
-    width: 25rem;
-    font-size: 20px;
-    
-    &:focus{
-        outline: none;
-    }
-}
-.fa-search{
     cursor: pointer;
-    font-size: 25px;
-    color: $Primary_Color;
+    background-color: $Secondary_Color;
     &:hover{
-        color: lighten($color: $Primary_Color, $amount: 20);
+        color: lighten($color: $Light_Color, $amount: 10);
+        background-color: lighten($color: $Secondary_Color, $amount: 10);
     }
-}
-.searchbar__btn{
-    background-color: transparent;
-    border: none;
-    
 }

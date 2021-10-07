@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import React from 'react'
 
 const SearchBar = () => {
 
-    const history = useHistory()
-    const [search, setSearch] = useState('')
-    
-    const handleOnSearch = (e) => {
-        e.preventDefault();
-        history.replace(`/search/anime/${search}`)
-        setSearch('')
-    }
+   
     return (
         <div className="searchbar__container">
             <div className="searchbar__links">
@@ -18,14 +10,8 @@ const SearchBar = () => {
                 <p className="searchbar__link">Mangas</p>
                 <p className="searchbar__link">Top</p>
                 <p className="searchbar__link">Forum</p>
-            </div>
-            <div className="searchbar__input">
-                <form onSubmit={handleOnSearch} className="searchbar__form">
-                    <input type="text" className="searchbar__search" placeholder="Search..." onChange={e => setSearch(e.target.value)} value={search}/>
-                    <button type='submit' className="searchbar__btn">
-                        <i className="fas fa-search" />
-                    </button>
-                </form>
+                <p className="searchbar__link">Recommendation</p>
+                <p className="searchbar__link">Search by Filters</p>
             </div>
         </div>
     )

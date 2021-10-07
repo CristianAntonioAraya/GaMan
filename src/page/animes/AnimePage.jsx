@@ -23,9 +23,6 @@ const AnimePage = () => {
         GetData()
     }, [animeId])
 
-    console.log(anime)
-
-
     if(anime === null ){
         return(
             <div>Loading</div>

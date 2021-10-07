@@ -1,5 +1,53 @@
-.sidebar__container{
+.navbar__container{
+    display: flex;
     width: 100%;
     background-color: $Primary_Color;
-    padding: 2rem 15rem;
+    padding: 1rem 15rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__title{
+    color: $Light_Color;
+    font-size: 40px;
+    text-decoration: none;
+}
+.navbar__input{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border: 2px solid $Secondary_Color;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    color: $Light_Color;
+    &:hover{
+        border-color: darken($color: $Primary_Color, $amount: 10);
+        color: lighten($color: $Primary_Color, $amount: 10);
+    }
+}
+.navbar__form{
+    display: flex;
+}
+.navbar__search{
+    background-color: transparent;
+    border: none;
+    color: $Light_Color;
+    width: 25rem;
+    font-size: 20px;
+    
+    &:focus{
+        outline: none;
+    }
+}
+.fa-search{
+    cursor: pointer;
+    font-size: 25px;
+    color: $Dark_Color;
+    &:hover{
+        color: lighten($color: $Light_Color, $amount: 10);
+    }
+}
+.navbar__btn{
+    background-color: transparent;
+    border: none;
+    
 }

@@ -1,10 +1,14 @@
 .searchpage__container{
     background-color: $Light_Color;
     height: 100%;
-    padding: 1rem 15rem;
 }
 .searchpage__content{
+    padding: 1rem 15rem; 
+}
+.searchpage__results{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
+    background-color: $Secondary_Color;
+    border: 5px solid $Primary_Color;
 }
